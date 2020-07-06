@@ -126,19 +126,19 @@ export class ComponentParser extends Parser<Component> {
       ...(component.interface?.field
         ?.map(f => {
           const attr: Attribute = {
-            name: f.id,
+            id: f.id,
             default: f.value,
             type: 'xs:string' // TODO: use actual xs:type?
           }
           return attr
         })
-        .filter(f => !!f.name) ?? [])
+        .filter(f => !!f.id) ?? [])
     ].reduce((prev: { [key: string]: Attribute }, next: Attribute) => {
-      if (!prev[next.name]) {
-        prev[next.name] = next
+      if (!prev[next.id]) {
+        prev[next.id] = next
       } else {
         console.warn(
-          `duplicate field "${next.name}" in component "${component.name}"`
+          `duplicate field "${next.id}" in component "${component.id}"`
         )
       }
       return prev
