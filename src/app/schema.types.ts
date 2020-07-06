@@ -35,7 +35,7 @@ export interface FieldType {
 }
 
 export interface InterfaceSchema {
-  name: string
+  id: string
   complexType: {
     choice: {
       minOccurs: string

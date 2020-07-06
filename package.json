@@ -30,9 +30,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/slheavner/scenegraph-schema.git"
+    "url": "https://github.com/iObject/scenegraph-schema.git"
   },
-  "homepage": "https://github.com/slheavner/scenegraph-schema",
+  "homepage": "https://github.com/iObject/scenegraph-schema",
   "devDependencies": {
     "@types/chokidar": "^2.1.3",
     "@types/glob": "^7.1.1",
